@@ -1,7 +1,6 @@
 from django.contrib import admin
-from experiences.models import Experience
+from experiences.models import Experience, Chapter
 
 
-class ExperienceAdmin(admin.ModelAdmin):
-    fields = ('user', 'title', 'moral')
-admin.site.register(Experience, ExperienceAdmin)
+admin.site.register(Experience)
+admin.site.register(Chapter)
