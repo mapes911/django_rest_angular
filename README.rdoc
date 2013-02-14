@@ -1,0 +1,4 @@
+== Django - REST Api demo
+
+Quick and dirty implementation of a REST api for experiences and chapters using Django RESTFramework
+To be used as a comparison of different frameworks
