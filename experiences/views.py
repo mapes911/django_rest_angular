@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework import permissions
 
-from .serializers import ExperienceSerializer, ExperienceDetailSerializer, ChapterDetailSerializer
+from .serializers import ExperienceSerializer, ChapterDetailSerializer
 from .models import Experience, Chapter
 from .permissions import ExperienceIsOwnerOrReadOnly, ChapterIsOwnerOrReadOnly
 
@@ -28,7 +28,7 @@ class ExperienceList(generics.ListCreateAPIView):
 
 class ExperienceDetail(generics.RetrieveUpdateDestroyAPIView):
     model = Experience
-    serializer_class = ExperienceDetailSerializer
+    serializer_class = ExperienceSerializer
 
     permission_classes = (permissions.IsAuthenticatedOrReadOnly, ExperienceIsOwnerOrReadOnly)
 
