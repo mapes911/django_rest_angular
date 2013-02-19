@@ -3,5 +3,27 @@
 {% block title %}Hello World!{% endblock %}
 
 {% block content %}
-HELLO WORLD!!
+
+{% load verbatim %}
+{% verbatim %}
+
+<h2>Suite101 - Angular Demo (Experiences)</h2>
+<p>
+This is a demo application using Angular.js
+</p>
+
+<div ng-controller="ExperienceListCtrl" class="sidebar">
+    <ul>
+        <li ng-repeat="experience in experiences">
+            <p><a href='#e/{{experience.id}}%>'>{{experience.title}}</a> - <em>{{experience.moral}}</em></p>
+            <p><a class="btn" href="#e/{{experience.id}}">View Experience »</a></p>
+        </li>
+    </ul>
+</div>
+
+<div id="content" class="main-content">
+</div>
+
+{% endverbatim %}
+
 {% endblock %}

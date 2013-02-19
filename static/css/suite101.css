@@ -1,0 +1,20 @@
+.sidebar {
+    width: 30%;
+    padding-right: 5%;
+    float: left;
+}
+.main-content {
+    width: 60%;
+    float: left;
+}
+ul.experience-list {
+    list-style-type: none;
+    padding-top: 20px;
+}
+li.experience-list-item {
+    display: inline-block;
+    width: 250px;
+    border-top: 1px dotted;
+    border-top: 1px dotted;
+    padding: 10px 0;
+}
